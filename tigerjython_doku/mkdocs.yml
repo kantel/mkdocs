@@ -17,7 +17,7 @@ nav:
 - "linien.md"
 - "shapes.md"
 - "numerik.md"
-copyright: (CC BY-SA 4.0) Jörg Kantel
+copyright: Copyright (<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a>) 2025, Jörg Kantel
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
