@@ -1,0 +1,37 @@
+site_name: TigerJython in Beispielen
+site_url: https://sitename.example
+theme:
+  name: material
+  features:
+    - content.code.copy
+    - navigation.footer
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+  language: de
+dev_addr: "127.0.0.1:5500"
+nav:
+- "index.md"
+- "rotkaeppchen.md"
+- "pixel.md"
+- "linien.md"
+- "shapes.md"
+copyright: (CC BY-SA 4.0) Jörg Kantel
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - footnotes
+extra_javascript:
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
+extra:
+  generator: false
