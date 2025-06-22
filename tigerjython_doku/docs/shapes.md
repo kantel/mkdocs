@@ -98,5 +98,3 @@ Auch dieses Ergebnis sieht recht nett aus, allerdings sollte man hier die Rekurs
 - Clifford A. Pickover: *Mit den Augen des Computers. Phantastische Welten aus dem Geist der Maschine*, München (Markt und Technik) 1992. Dem Cantor-Käse ist auf den Seiten 171-181 ein eigenes Kapitel gewidmet.
 - Chris Robart (Ed.): *[Programming Ideas: For Teaching High School Computer Programming](https://mmhs.ca/compsci/ideas2.pdf)*, (PDF 260 KB, 2nd Edition) 2001. Eine Fundgrube voller Ideen, deren Download sich in jedem Fall lohnt.
 - Ian Stewart: *Spielt Gott Roulette? Uhrwerk oder Chaos*, Frankfurt/Main, Leipzig (Insel Taschenbuch) 1993, Seiten 130-134.
-
-## Der Baum des Pythagoras
