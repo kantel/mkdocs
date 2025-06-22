@@ -1,5 +1,15 @@
 # Zeichnen mit der Schildkröte
 
+## Spaß mit der Turtle: Mandalas nach Joshua Goldstein
+
+## Noch mehr Spaß mit TigerJython: Turtle-Spirale
+
+## Es ist ja alles so quietschebunt hier
+
+## Random Walker
+
+## Pi springt im Dreieck (Random Walk)
+
 ## Hexagonaler Random Walk
 
 [![](images/hexawalk-b.jpg)](https://www.flickr.com/photos/schockwellenreiter/54598377130/)
@@ -133,7 +143,11 @@ Random-Walk-Modelle finden einige interessanten Anwendungen von der Biologie bis
 - Rubin H. Landau: *[Random Walks](https://sites.science.oregonstate.edu/~landaur/INSTANCES/WebModules/5_RandomWalk/RandomWalk.html)*, aus: *[INSTANCES](https://sites.science.oregonstate.edu/~landaur/INSTANCES/index.html) (Incorporating Computational Scientific Thinking Advances into Education & Science Courses)*, Oregon State Univ, Corvallis (Depart of Physics), 2013
 - William F. Sharpe, Daniel G. Goldstein und Philip W. Blythe: *[The Distribution Builder: A Tool for Inferring Investor Preferences](https://web.stanford.edu/~wfsharpe/art/qpaper/qpaper.pdf)* (PDF),  10. Oktober 2000
 
-Und auch im oben verlinkten [Original-Blog-Post](https://www.decisionsciencenews.com/?p=6464), der mich zu diesem Beitrag inspirierte, hat *Dan Goldstein* ein paar überraschende Überlegungen zum (hexagonalen) Zufallsspaziergang der Schildkröte angestellt. 
+Und auch im oben verlinkten [Original-Blog-Post](https://www.decisionsciencenews.com/?p=6464), der mich zu diesem Beitrag inspirierte, hat *Dan Goldstein* ein paar überraschende Überlegungen zum (hexagonalen) Zufallsspaziergang der Schildkröte angestellt.
+
+## Auf der Suche nach der Mona Lisa in der Kreiszahl Pi
+
+## Die Kochsche Schneeflocke
 
 ## Der Baum des Pythagoras
 

@@ -16,6 +16,7 @@ nav:
 - "pixel.md"
 - "linien.md"
 - "shapes.md"
+- "numerik.md"
 copyright: (CC BY-SA 4.0) Jörg Kantel
 markdown_extensions:
   - pymdownx.highlight:
