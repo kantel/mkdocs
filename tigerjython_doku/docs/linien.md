@@ -14,13 +14,13 @@ $$
 
 oder in Python-Code:
 
-~~~python
+~~~py linenums="1"
 r = exp(cos(theta)) - 2*cos(4*theta) + (sin(theta/12))**5
 ~~~
 
 In TigerJython sieht das dann so aus:
 
-~~~python
+~~~py title="Schmetterlingskurve" linenums="1"
 import gpanel as gp
 import math, colorsys
 
@@ -58,7 +58,7 @@ print("I did it, Babe!")
 
 Um die Kurve optisch aufzuhübschen, habe ich -- wie [hier schon einmal beschrieben](http://blog.schockwellenreiter.de/2022/10/2022100901.html) -- das [Colorsys-Modul](https://docs.python.org/3/library/colorsys.html) verwendet, das Teil der Python-Standard-Bibliothek ist, und mit
 
-~~~python
+~~~py linenums="1"
 c = colorsys.hsv_to_rgb(hue, 1.0 - hue, 1.0)
 ~~~
 
@@ -99,7 +99,7 @@ Dabei entdeckte er, daß diese Lösung nur noch in den Anfangswerten mit der Lö
 
 Da TigerJython keine eingebaute Bibliothek zur numerischen Lösung von Differentialgleichungen besitzt, habe ich das einfache [Eulersche Polygonzugverfahren](https://de.wikipedia.org/wiki/Explizites_Euler-Verfahren) zur numerischen Berechnung herangezogen
 
-~~~python
+~~~py linenums="27"
 dx = -sigma*(x - y)*dt
 dy = (x*(r - z) - y)*dt
 dz = (x*y - b*z)*dt
@@ -112,7 +112,7 @@ und dabei konstant `dt = 0.01` gesetzt. Das benötigt natürlich mehr Rechenkapa
 
 Um das zu verdeutlichen, habe ich mit
 
-~~~python
+~~~py linenums="1"
 hue = ((20*t)%100)/100.0
 c = colorsys.hsv_to_rgb(hue, 1.0, 1.0)
 ~~~
@@ -123,7 +123,7 @@ Außerdem wollte ich, daß sich der Attraktor langsam aufbaut, damit Ihr die Ent
 
 [^4]: Der Parameter `ms` steht für Millisekunden.
 
-~~~python
+~~~py linenums="1"
 gp.enableRepaint(False)
 
 while(True):
@@ -139,7 +139,7 @@ Zu guter Letzt ist noch das Problem zu lösen, daß sich der klassische Lorenz-A
 
 Bei der Skalierung auf die Fenstergröße habe ich ein wenig geschummelt, um das Fenster jeweils bestmöglich auszufüllen. Für die x-z-Ebene habe ich diese Parameter genutzt:
 
-~~~python
+~~~py linenums="38"
 xx = (x*8) + 320
 zz = 470 - (z*5.5)
     if (t == 0.0):
@@ -152,7 +152,7 @@ zz = 470 - (z*5.5)
 
 In der y-z-Ebene waren es dann diese Parameter:
 
-~~~python
+~~~py linenums="38"
 yy = (y*7) + 320
 zz = 470 - (z*5.5)
     if (t == 0.0):
@@ -165,7 +165,7 @@ zz = 470 - (z*5.5)
 
 Und in der x-y-Ebene fand ich dann, daß diese Skalierungsparameter das Bildschirmfenster optimal ausfüllten:
 
-~~~python
+~~~py linenums="38"
 xx = (x*8) + 320
 yy = 240 - (y*5)
     if (t == 0.0):
@@ -178,7 +178,7 @@ Denn nicht nur das Hirn, sondern auch das Auge soll sich schließlich an den Erg
 
 Jetzt aber den kompletten Quellcode, damit Ihr auch alles nachvollziehen, nachprogrammieren, aber auch erweitern und ausbauen könnt:
 
-~~~python
+~~~py title="Lorenz-Attraktor" linenums="1"
 import gpanel as gp
 import math, colorsys
 
@@ -230,7 +230,6 @@ while t < 74.9:
 print("I did it, Babe!")
 ~~~
 
-Wie bei (fast) allen meinen TigerJython-Experimenten gibt es den [Quellcode](https://gitlab.com/kantel/tigerjython/-/blob/master/fraktale/lorenz01.py) natürlich auch in meinem GitLab-Repositorium.
 
 ### Literatur
 
@@ -277,7 +276,7 @@ Wegen der beschriebenen Form heißt das System im Englischen auch *Roessler funn
 
 ### Der Quellcode
 
-~~~python
+~~~py title="Rössler-Attraktor" linenums="1"
 import gpanel as gp
 import math, colorsys
 

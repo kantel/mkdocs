@@ -20,7 +20,7 @@ Der bei Microsoft forschende Psychologe und Informatiker *Dan Goldstein* [berich
 
 Als ich dies las, dachte ich, daß dies doch ein schönes Projekt für eine Realisierung mit der Turtle sei. Zuerst stellte ich mir die Frage, wie man denn der Schildkröte beibringt, ein Hexagon zu zeichnen. Ein [Blick in die Wikipedia](https://de.wikipedia.org/wiki/Sechseck) half mir weiter, denn dort konnte ich entnehmen, daß die Schildkröte an jedem der sechs Endpunkt einen Winkel von $60°$ einschlagen mußte, entweder konsequent nach rechts oder konsequent nach links. Die sechs Winkel für die sechs möglichen Richtungen sind also $0°$, $60°$, $120°$, $180°$, $240°$ und $300°$. *Brute Force* zeichnet sich ein Hexagon also so:
 
-~~~py
+~~~py linenums="1"
 hexi = gt.Turtle(tf)
 hexi.setHeading(0)
 hexi.forward(100)
@@ -38,7 +38,7 @@ hexi.forward(100)
 
 Natürlich geht das in einer Schleife viel kompakter und einfacher:
 
-~~~py
+~~~py linenums="1"  
 hexi = gt.Turtle(tf)
 
 for in in range(6):
@@ -49,7 +49,7 @@ for in in range(6):
 
 Für die eigentliche Realisierung in [TigerJython](http://cognitiones.kantel-chaos-team.de/programmierung/python/tigerjython.html) habe ich dann noch auf die bewährte [Coding Train Farbpalette](http://cognitiones.kantel-chaos-team.de/multimedia/farbpaletten/codingtrainfarben.html) zurückgegriffen, damit auch alles schön bunt wird. Außerdem habe ich mit Pythons `randint`-Modul einen Würfel simuiert, der dafür sorgt, daß der Random Walk auf wirklich (pseudo-) zufällig ist:
 
-~~~py
+~~~py linenums="1"
 # Roll Dice and set Angle
 roll = randint(0, 5)
 angle = roll*60
@@ -151,18 +151,21 @@ Und auch im oben verlinkten [Original-Blog-Post](https://www.decisionsciencenews
 
 ## Der Baum des Pythagoras
 
+Eine weitere Ikone der fraktalen Geometrie ist der Pythagoras-Baum. Er geht zurück auf den niederländischen Ingenieur und späteren Mathematiklehrer *Albert E. Bosman* (1891–1961). Er entwarf während des 2. Weltkrieges in seiner Freizeit an einem Zeichenbrett, an dem er sonst U-Boot-Pläne zeichnete, geometrische Muster. Seine Graphiken wurden 1957 in dem Buch »*Het wondere onderzoekingsveld der vlakke meetkunde*« veröffentlicht. Der Baum beruht auf einer rekursiven Abbildung des Pythagoras-Lehrsatzes: Die beiden Quadrate auf den Katheten des rechtwinkligen Dreiecks dienen als Verzweigung, auf dem jedes Kathetenquadrat sich wiederum verzweigt.
+
 ### Symmetrischer Pythagoras-Baum
 
 [![](images/sympythagoras.jpg)](https://www.flickr.com/photos/schockwellenreiter/54564211087/)
 
-~~~python
+~~~py title="Symmetrischer Pythagoras-Baum" linenums="1"
 import gturtle as gt
 import math
 
-palette = [makeColor(189, 183, 110), makeColor(0, 100, 0), makeColor(34, 139, 105),
-           makeColor(152, 251, 152), makeColor(85, 107, 47), makeColor(139, 69, 19),
-           makeColor(154, 205, 50), makeColor(107, 142, 35), makeColor(139, 134, 78),
-           makeColor(139, 115, 85)]
+palette = [makeColor(189, 183, 110), makeColor(0, 100, 0),
+           makeColor(34, 139, 105), makeColor(152, 251, 152),
+           makeColor(85, 107, 47), makeColor(139, 69, 19), 
+           makeColor(154, 205, 50), makeColor(107, 142, 35),
+           makeColor(139, 134, 78), makeColor(139, 115, 85)]
 WIDTH = 640
 HEIGHT = 480
 maxRec = 2
@@ -208,14 +211,15 @@ print("I did it, Babe!")
 
 [![](images/asympythagoras.jpg)](https://www.flickr.com/photos/schockwellenreiter/54565205826/)
 
-~~~python
+~~~py title="Asymmetrischer Pythagoras-Baum" linenums="1"
 import gturtle as gt
 import math
 
-palette = [makeColor(189, 183, 110), makeColor(0, 100, 0), makeColor(34, 139, 105),
-           makeColor(152, 251, 152), makeColor(85, 107, 47), makeColor(139, 69, 19),
-           makeColor(154, 205, 50), makeColor(107, 142, 35), makeColor(139, 134, 78),
-           makeColor(139, 115, 85)]
+palette = [makeColor(189, 183, 110), makeColor(0, 100, 0),
+           makeColor(34, 139, 105), makeColor(152, 251, 152),
+           makeColor(85, 107, 47), makeColor(139, 69, 19), 
+           makeColor(154, 205, 50), makeColor(107, 142, 35),
+           makeColor(139, 134, 78), makeColor(139, 115, 85)]
 WIDTH = 640
 HEIGHT = 480
 
@@ -268,7 +272,10 @@ print("I did it, Babe!")
 
 Im Prinzip liegen die Unterschiede in den beiden Versionen nur in der Funktion `tree()`, allerdings muß sich die Schildkröte in der Funktion `square()` resepektive `quadrat()` beim symmetrischen Pythagoras-Baum vom Startpunkt aus nach **rechts** (`p.right(90)`) und bei der asymmetrischen Variante nach **links** (`p.left(90)`) bewegen.
 
-### Literatur
+### Weiterführende Literatur
 
+- Einen rekursiven Algorithmus gibt es in einem Pascal-Programm aus Jürgen Plate: *Computergrafik: Einführung – Algorithmen – Programmentwicklung*, München (Franzis) 2. Auflage 1988, Seiten 460-462.
+- Dazu vergleiche auch: Jörg Kantel: *[Tutorial: Einen Pythagoras-Baum mit der NodeBox zeichnen](http://blog.schockwellenreiter.de/2017/11/2017111902.html)*, Schockwellenreiter vom 19. November 2017 und *[Wochenendspaß mit Processing.py: Der Baum des Pythagoras](http://blog.schockwellenreiter.de/2017/02/2017020402.html)*, Schockwellenreiter vom 4. Februar 2017.
+- Die Geschichte des Baumes steht in dem schon mehrfach erwähnten Buch von Dietmar Herrmann, *Algorithmen für Chaos und Fraktale*, Bonn (Addison-Wesley) 1994 auf den Seiten 170f.
 - Jarka Arnold, Tobias Kohn, Aegidius Plüss: *[Programmierkonzepte mit Python und der Lernumgenbung TigerJython](https://programmierkonzepte.ch/index.php)*, Version 2.77, Letzte Aktualisierung: 1. Juni 2024
 - Jarka Arnold, Aegidius Plüss: *[Grafik, Robotik, Datenbanken und Spielprogrammierung mit TigerJython](https://www.jython.ch/index.php)* (TigerJython für Gymnasien), Version 2.5, Letzte Aktualisierung: 12. Juli 2024

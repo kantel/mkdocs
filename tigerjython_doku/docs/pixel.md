@@ -49,7 +49,7 @@ Normalerweise werden die gefundenen Punkte der Abbildung als Pixel auf dem Monit
 
 Das erste Beispiel ist eine Abbildung mit den Parametern $a=0.4$ und $b=1.0$. Die Schleife wird 120.000 mal durchlaufen und als Skalierungsfaktoren zur Anpassung an die Fenstergröße habe ich diese Parameter gewählt:
 
-~~~python
+~~~py linenums="28"
 xx = 350 + x*22
 yy = 240 - y*22
 ~~~
@@ -60,16 +60,14 @@ Die zweite Abbildung ist auch unter dem Namen *Fantastic Feather Fractal* bekann
 
 [^5]: *Clifford A. Pickover* hat in »Mazes for the Mind – Computers and the Unexpected« dem *Fantastic Feather Fractal* sogar ein ganzes, wenn auch kleines Kapitel gewidmet (Seiten 33f). Und da dieses Fraktal eines seiner Lieblingsfraktale ist, kommt es in seinem Buch »Chaos in Wonderland – Visual Adventures in a Fractal World« noch einmal vor (Seite 261).
 
-~~~python
+~~~py linenums="28"
 xx = 350 + x*26
 yy = 280 - y*26
 ~~~
 
 Wie immer habe ich diese Parameter durch wildes Experimentieren herausbekommen. Nun aber den vollständigen Quellcode (für das Fantastische Feder-Fraktal):
 
-~~~python
-# Mira-Abbildung (2): Fantastic Feather Fractal
-
+~~~py title="Mira-Abbildung (2): Fantastic Feather Fractal" linenums="1"
 import gpanel as gp
 import colorsys
 
